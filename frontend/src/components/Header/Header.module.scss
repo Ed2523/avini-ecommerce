@@ -1,0 +1,43 @@
+.header {
+  background-color: black;
+  color: white;
+}
+.nav {
+  min-height: 10vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  cursor: pointer;
+  font-size: 3rem;
+}
+.logo:hover {
+  color: grey;
+}
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30%;
+  gap: 5rem;
+  li {
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+    svg {
+      font-size: 1.8rem;
+      margin: 0 0.5rem 0 0;
+    }
+    a {
+      font-size: 1.8rem;
+    }
+  }
+  li:hover {
+    color: grey;
+  }
+}
