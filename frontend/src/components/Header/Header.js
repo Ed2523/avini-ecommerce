@@ -1,8 +1,16 @@
 import React from "react";
 import styles from "./Header.module.scss";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
+import { useState } from "react";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+
+  const toggleMenu = () => {
+    open ? setOpen(false) : setOpen(true);
+    console.log(open);
+  };
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -21,6 +29,14 @@ const Header = () => {
             </a>
           </li>
         </ul>
+        <div className={styles.burger} onClick={toggleMenu}>
+          <span
+            className={open ? styles.burgerSpan1 : styles.burgerSpan}></span>
+          <span
+            className={open ? styles.burgerSpan2 : styles.burgerSpan}></span>
+          <span
+            className={open ? styles.burgerSpan3 : styles.burgerSpan}></span>
+        </div>
       </nav>
     </header>
   );
