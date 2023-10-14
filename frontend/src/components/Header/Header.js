@@ -9,7 +9,7 @@ const Header = () => {
   const toggleMenu = () => {
     open ? setOpen(false) : setOpen(true);
   };
-
+  console.log(open);
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -30,11 +30,17 @@ const Header = () => {
         </ul>
         <div className={styles.burger} onClick={toggleMenu}>
           <span
-            className={open ? styles.burgerSpan1 : styles.burgerSpan}></span>
+            className={
+              open ? styles.openBurgerSpan1 : styles.burgerSpan
+            }></span>
           <span
-            className={open ? styles.burgerSpan2 : styles.burgerSpan}></span>
+            className={
+              open ? styles.openBurgerSpan2 : styles.burgerSpan
+            }></span>
           <span
-            className={open ? styles.burgerSpan3 : styles.burgerSpan}></span>
+            className={
+              open ? styles.openBurgerSpan3 : styles.burgerSpan
+            }></span>
         </div>
       </nav>
     </header>

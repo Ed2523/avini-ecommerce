@@ -64,7 +64,7 @@
     display: block;
     transition: 0.5s ease-in-out;
   }
-  .burgerSpan1 {
+  .openBurgerSpan1 {
     padding: 0.15rem 1.8rem;
     background: white;
     margin: 0.7rem 0rem;
@@ -72,7 +72,7 @@
     transition: 0.5s ease-in-out;
     transform: rotateZ(-45deg) translateY(450%);
   }
-  .burgerSpan2 {
+  .openBurgerSpan2 {
     padding: 0.15rem 1.8rem;
     background: white;
     margin: 0.7rem 0rem;
@@ -80,7 +80,7 @@
     transition: 0.5s ease-in-out;
     opacity: 0;
   }
-  .burgerSpan3 {
+  .openBurgerSpan3 {
     padding: 0.15rem 1.8rem;
     background: white;
     margin: 0.7rem 0rem;
