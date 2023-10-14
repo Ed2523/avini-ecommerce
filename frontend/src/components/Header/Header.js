@@ -9,7 +9,6 @@ const Header = () => {
   const toggleMenu = () => {
     open ? setOpen(false) : setOpen(true);
   };
-  console.log(open);
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
