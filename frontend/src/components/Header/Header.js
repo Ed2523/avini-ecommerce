@@ -13,7 +13,7 @@ const Header = () => {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <div className={styles.logo}>Avini</div>
-        <ul className={styles.navLinks}>
+        <ul className={open ? styles.navLinksOpen : styles.navLinks}>
           <li>
             <a>
               <FaShoppingCart />

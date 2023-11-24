@@ -49,10 +49,72 @@
   .header {
     color: white;
   }
+
   .navLinks {
-    display: none;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 40vh;
+    width: 100vw;
+    padding: 1rem 0;
+    background: #101011;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.7s ease-in-out;
+    transform: translateY(-50vh);
+    li {
+      width: 60vw;
+      text-align: center;
+      font-size: 3rem;
+      a {
+        text-decoration: none;
+        color: white;
+        margin-left: 1rem;
+      }
+    }
+    svg {
+      display: none;
+    }
   }
+
+  .navLinksOpen {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 40vh;
+    width: 100vw;
+    padding: 1rem 0;
+    background: #101011;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.7s ease-in-out;
+    gap: 5rem;
+    li {
+      //we add this beacause nav-links li inhernce a 3rem font size from header
+      font-size: 3rem;
+      list-style-type: none;
+      width: 60vw;
+      text-align: center;
+      .fas {
+        font-size: 1.5rem;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        margin-left: 1rem;
+      }
+    }
+    svg {
+      display: none;
+    }
+  }
+
   .burger {
+    z-index: 1;
     width: 7%;
     display: block;
     align-self: center;
