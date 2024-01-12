@@ -7,7 +7,7 @@ const HomeScreen = () => {
   return (
     <div className={styles.homeScreen}>
       {products.map((product) => (
-        <Product />
+        <Product product={product} />
       ))}
     </div>
   );

@@ -11,7 +11,6 @@ const App = () => {
       <main className='mainContainer'>
         <HomeScreen />
       </main>
-
       <Footer />
     </>
   );
