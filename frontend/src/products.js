@@ -78,7 +78,7 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: "5",
+    _id: "7",
     name: "Logitech G-Series Gaming Mouse",
     image: "/images/mouse.jpg",
     description:
@@ -91,7 +91,7 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: "6",
+    _id: "8",
     name: "Amazon Echo Dot 3rd Generation",
     image: "/images/alexa.jpg",
     description:

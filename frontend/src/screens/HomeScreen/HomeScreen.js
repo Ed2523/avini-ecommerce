@@ -7,7 +7,7 @@ const HomeScreen = () => {
   return (
     <div className={styles.homeScreen}>
       {products.map((product) => (
-        <Product product={product} />
+        <Product product={product} key={product._id} />
       ))}
     </div>
   );
