@@ -5,11 +5,14 @@ import products from "../../products";
 
 const HomeScreen = () => {
   return (
-    <div className={styles.homeScreen}>
-      {products.map((product) => (
-        <Product product={product} key={product._id} />
-      ))}
-    </div>
+    <>
+      <h1 className={styles.latest}>Latest Products</h1>
+      <div className={styles.homeScreen}>
+        {products.map((product) => (
+          <Product product={product} key={product._id} />
+        ))}
+      </div>
+    </>
   );
 };
 
