@@ -18,16 +18,16 @@ const Header = () => {
         </Link>
         <ul className={open ? styles.navLinksOpen : styles.navLinks}>
           <li>
-            <a>
+            <Link to='/cart'>
               <FaShoppingCart />
               Cart
-            </a>
+            </Link>
           </li>
           <li>
-            <a>
+            <Link to='/login'>
               <FaUser />
               Sign In
-            </a>
+            </Link>
           </li>
         </ul>
         <div className={styles.burger} onClick={toggleMenu}>
