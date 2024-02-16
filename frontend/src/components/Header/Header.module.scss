@@ -14,7 +14,11 @@
   align-items: center;
   width: 20%;
   cursor: pointer;
-  font-size: 3rem;
+  text-decoration: none;
+  h1 {
+    font-size: 3rem;
+    color: white;
+  }
 }
 .logo:hover {
   color: grey;

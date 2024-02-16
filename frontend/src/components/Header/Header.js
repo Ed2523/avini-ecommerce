@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Header.module.scss";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -12,7 +13,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <div className={styles.logo}>Avini</div>
+        <Link className={styles.logo} to='/'>
+          <h1>Avini</h1>
+        </Link>
         <ul className={open ? styles.navLinksOpen : styles.navLinks}>
           <li>
             <a>
