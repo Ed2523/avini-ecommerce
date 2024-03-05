@@ -1,0 +1,24 @@
+{
+  "name": "avini",
+  "version": "1.0.0",
+  "description": "Organic natural Ice cream",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ed2523/avini-ecommerce.git"
+  },
+  "author": "Ed Chávez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ed2523/avini-ecommerce/issues"
+  },
+  "homepage": "https://github.com/Ed2523/avini-ecommerce#readme",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
