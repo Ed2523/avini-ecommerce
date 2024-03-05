@@ -6,6 +6,7 @@
   align-items: center;
   img {
     width: 90%;
+    max-height: 100%;
   }
   p,
   a {
@@ -13,5 +14,15 @@
     text-align: center;
     color: rgb(23, 76, 57);
     text-decoration: none;
+  }
+}
+@media screen and (max-width: 514px) {
+  .card {
+    img {
+      width: 70%;
+    }
+    a {
+      max-height: 70%;
+    }
   }
 }
