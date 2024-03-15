@@ -5,16 +5,14 @@ import Rating from "../Rating";
 
 const Product = ({ product }) => {
   return (
-    <div className={styles.card}>
-      <Link to={`/product/${product._id}`}>
-        <img src={product.image}></img>
-      </Link>
-      <Link>
-        <p>{product.name}</p>
-      </Link>
+    <Link className={styles.card} to={`/product/${product._id}`}>
+      <img src={product.image}></img>
+
+      <p>{product.name}</p>
+
       <Rating value={product.rating} text={`${product.numReviews} reviews`} />
       <p>${product.price}</p>
-    </div>
+    </Link>
   );
 };
 
