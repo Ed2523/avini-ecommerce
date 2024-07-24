@@ -11,7 +11,7 @@ connectDB();
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Api is running...");
+  res.send("Api is running..");
 });
 
 app.use("/api/products", productRoutes);
