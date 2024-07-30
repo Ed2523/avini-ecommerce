@@ -6,21 +6,19 @@ import { useGetProductDetailsQuery } from "../../slices/productsApiSlice";
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
-
   const {
     data: product,
     isLoading,
     error,
   } = useGetProductDetailsQuery(productId);
-
   if (isLoading) return <h2>Loading...</h2>;
   if (error) return <div>{error?.message || "An error occurred"}</div>;
-
   return (
     <>
       <Link to='/'>
         <button className={styles.goBack}>Go back</button>
       </Link>
+
       <div className={styles.productDetails}>
         <div className={styles.imageContainer}>
           <img src={product.image}></img>
