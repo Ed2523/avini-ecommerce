@@ -1,11 +1,12 @@
 import React from "react";
 import Product from "../../components/Product/Product";
 import styles from "./HomeScreen.module.scss";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useGetProductsQuery } from "../../slices/productsApiSlice";
 
 const HomeScreen = () => {
-  const [products, setProducts] = useState([]);
+  /** 
+   * Old way to do it before using redux toolkit slices
+   *  const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
     const { data } = await axios.get("/api/products");
@@ -15,15 +16,25 @@ const HomeScreen = () => {
   useEffect(() => {
     fetchProducts();
   }, []);
+  */
+
+  const { data: products, isLoading, error } = useGetProductsQuery();
 
   return (
     <>
-      <h1 className={styles.latest}>Latest Products</h1>
-      <div className={styles.homeScreen}>
-        {products.map((product) => (
-          <Product product={product} key={product._id} />
-        ))}
-      </div>
+      {error && <div>{error?.data?.message || error.error}</div>}
+      {isLoading ? (
+        <h2>Loading...</h2>
+      ) : (
+        <>
+          <h1 className={styles.latest}>Latest Products</h1>
+          <div className={styles.homeScreen}>
+            {products?.map((product) => (
+              <Product product={product} key={product._id} />
+            ))}
+          </div>
+        </>
+      )}
     </>
   );
 };
