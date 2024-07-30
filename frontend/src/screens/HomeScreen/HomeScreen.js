@@ -20,21 +20,17 @@ const HomeScreen = () => {
 
   const { data: products, isLoading, error } = useGetProductsQuery();
 
+  if (isLoading) return <h2>Loading...</h2>;
+  if (error) return <div>{error?.message || "An error occurred"}</div>;
+
   return (
     <>
-      {error && <div>{error?.data?.message || error.error}</div>}
-      {isLoading ? (
-        <h2>Loading...</h2>
-      ) : (
-        <>
-          <h1 className={styles.latest}>Latest Products</h1>
-          <div className={styles.homeScreen}>
-            {products?.map((product) => (
-              <Product product={product} key={product._id} />
-            ))}
-          </div>
-        </>
-      )}
+      <h1 className={styles.latest}>Latest Products</h1>
+      <div className={styles.homeScreen}>
+        {products?.map((product) => (
+          <Product product={product} key={product._id} />
+        ))}
+      </div>
     </>
   );
 };

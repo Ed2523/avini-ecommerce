@@ -2,22 +2,19 @@ import React from "react";
 import { useParams, Link } from "react-router-dom"; //Hook to obtain id from url
 import Rating from "../../components/Rating";
 import styles from "./ProductScreen.module.scss";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useGetProductDetailsQuery } from "../../slices/productsApiSlice";
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
 
-  const [product, setProduct] = useState({});
+  const {
+    data: product,
+    isLoading,
+    error,
+  } = useGetProductDetailsQuery(productId);
 
-  const fetchProduct = async () => {
-    const { data } = await axios.get(`/api/products/${productId}`);
-    setProduct(data);
-  };
-
-  useEffect(() => {
-    fetchProduct();
-  }, [productId]);
+  if (isLoading) return <h2>Loading...</h2>;
+  if (error) return <div>{error?.message || "An error occurred"}</div>;
 
   return (
     <>
